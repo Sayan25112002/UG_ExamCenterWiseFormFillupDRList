@@ -1,416 +1,410 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Subject" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="349e4f16-8a16-4ab3-92d2-7ce805fa9d6c">
-    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
-    <style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
-        <box>
-            <pen lineWidth="0.5" lineColor="#000000"/>
-            <topPen lineWidth="0.5" lineColor="#000000"/>
-            <leftPen lineWidth="0.5" lineColor="#000000"/>
-            <bottomPen lineWidth="0.5" lineColor="#000000"/>
-            <rightPen lineWidth="0.5" lineColor="#000000"/>
-        </box>
-    </style>
-    <style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
-        <box>
-            <pen lineWidth="0.5" lineColor="#000000"/>
-            <topPen lineWidth="0.5" lineColor="#000000"/>
-            <leftPen lineWidth="0.5" lineColor="#000000"/>
-            <bottomPen lineWidth="0.5" lineColor="#000000"/>
-            <rightPen lineWidth="0.5" lineColor="#000000"/>
-        </box>
-    </style>
-    <style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
-        <box>
-            <pen lineWidth="0.5" lineColor="#000000"/>
-            <topPen lineWidth="0.5" lineColor="#000000"/>
-            <leftPen lineWidth="0.5" lineColor="#000000"/>
-            <bottomPen lineWidth="0.5" lineColor="#000000"/>
-            <rightPen lineWidth="0.5" lineColor="#000000"/>
-        </box>
-    </style>
-    <subDataset name="studentDataset" uuid="3d57d169-81f0-4249-bbeb-75474b0dcd22">
-        <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
-        <queryString>
-            <![CDATA[]]>
-        </queryString>
-        <field name="uid" class="java.lang.String"/>
-        <field name="registration" class="java.lang.String"/>
-        <field name="name" class="java.lang.String"/>
-        <field name="courseId" class="java.lang.String"/>
-        <field name="checkedAnd" class="java.lang.String"/>
-        <field name="signatureOf" class="java.lang.String"/>
-    </subDataset>
-    <queryString>
-        <![CDATA[]]>
-    </queryString>
-    <field name="subject" class="java.lang.String"/>
-    <field name="subjectType" class="java.lang.String"/>
-    <field name="semester" class="java.lang.String"/>
-    <field name="formFillupType" class="java.lang.String"/>
-    <field name="students" class="java.util.List"/>
-    <background>
-        <band splitType="Stretch"/>
-    </background>
-    <columnHeader>
-        <band height="68" splitType="Stretch">
-            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-            <staticText>
-                <reportElement mode="Opaque" x="0" y="0" width="160" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="a291e2ba-4c26-4c14-aa2b-2f911aa14f08">
-                    <property name="com.jaspersoft.layout.grid.x" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
-                    <property name="com.jaspersoft.layout.grid.colspan" value="2"/>
-                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
-                </reportElement>
-                <box topPadding="3" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[SUBJECT]]></text>
-            </staticText>
-            <textField>
-                <reportElement mode="Opaque" x="160" y="0" width="158" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="fd63c899-8068-49d0-8ce8-5d91e9a77d1a">
-                    <property name="com.jaspersoft.layout.grid.x" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
-                    <property name="com.jaspersoft.layout.grid.colspan" value="2"/>
-                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
-                </reportElement>
-                <box topPadding="3" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
-            </textField>
-            <staticText>
-                <reportElement mode="Opaque" x="318" y="0" width="158" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="4f0187a0-96fc-452d-8bdc-e4cbb3a83dad">
-                    <property name="com.jaspersoft.layout.grid.x" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
-                    <property name="com.jaspersoft.layout.grid.colspan" value="2"/>
-                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
-                </reportElement>
-                <box topPadding="3" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[SUBJECT TYPE]]></text>
-            </staticText>
-            <textField>
-                <reportElement mode="Opaque" x="476" y="0" width="79" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="695cc38d-2048-473b-8e3b-59be82a6753c"/>
-                <box topPadding="3" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <textFieldExpression><![CDATA[$F{subjectType}]]></textFieldExpression>
-            </textField>
-            <staticText>
-                <reportElement mode="Opaque" x="0" y="23" width="160" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="008c9a75-c3e6-42c6-a31d-2c9199b84e37">
-                    <property name="com.jaspersoft.layout.grid.x" value="0"/>
-                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
-                    <property name="com.jaspersoft.layout.grid.colspan" value="2"/>
-                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
-                </reportElement>
-                <box topPadding="3" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[SEMESTER]]></text>
-            </staticText>
-            <textField>
-                <reportElement mode="Opaque" x="160" y="23" width="158" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="df229eab-17ba-491a-9999-b998597023e0">
-                    <property name="com.jaspersoft.layout.grid.x" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
-                    <property name="com.jaspersoft.layout.grid.colspan" value="2"/>
-                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
-                </reportElement>
-                <box topPadding="3" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <textFieldExpression><![CDATA[$F{semester}]]></textFieldExpression>
-            </textField>
-            <staticText>
-                <reportElement mode="Opaque" x="318" y="23" width="158" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="4afc146e-e883-4aaf-9a78-f34ab9ac5b09">
-                    <property name="com.jaspersoft.layout.grid.x" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
-                    <property name="com.jaspersoft.layout.grid.colspan" value="2"/>
-                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
-                </reportElement>
-                <box topPadding="3" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[FORM FILLUP TYPE]]></text>
-            </staticText>
-            <textField>
-                <reportElement mode="Opaque" x="476" y="23" width="79" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="a2c65c6e-4842-42ba-8723-4147a88bb602"/>
-                <box topPadding="3" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <textFieldExpression><![CDATA[$F{formFillupType}]]></textFieldExpression>
-            </textField>
-            <staticText>
-                <reportElement x="0" y="46" width="80" height="22" uuid="b59a47cd-69e6-40a2-b2f2-5ad1d1e77ff9">
-                    <property name="com.jaspersoft.layout.grid.x" value="0"/>
-                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
-                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
-                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
-                    <property name="com.jaspersoft.layout.grid.colspan" value="1"/>
-                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
-                </reportElement>
-                <box topPadding="5" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[SL.]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="80" y="46" width="80" height="22" uuid="e7004ba2-b553-40e3-9157-01e7a9b91522"/>
-                <box topPadding="5" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[UID/College]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="160" y="46" width="79" height="22" uuid="b22db989-87d3-4306-bb48-e1db9175d231"/>
-                <box topPadding="5" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[REGISTRATION]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="239" y="46" width="79" height="22" uuid="3138cee5-d165-4f1a-87ac-634e2a0529d8"/>
-                <box topPadding="5" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[NAME]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="318" y="46" width="79" height="22" uuid="48628767-6db0-4346-a73e-01bfd21ad01a"/>
-                <box topPadding="5" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[COURSE IDs	]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="397" y="46" width="79" height="22" uuid="a23b91e9-d5f7-4e6d-90bb-2531df8508bf"/>
-                <box topPadding="5" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[Checked and]]></text>
-            </staticText>
-            <staticText>
-                <reportElement x="476" y="46" width="79" height="22" uuid="9dd0abff-5107-41c6-a62a-cc8ceee11fd1"/>
-                <box topPadding="5" leftPadding="5">
-                    <topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                    <rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
-                </box>
-                <textElement>
-                    <font isBold="true"/>
-                </textElement>
-                <text><![CDATA[Signature of Student]]></text>
-            </staticText>
-        </band>
-    </columnHeader>
-    <detail>
-        <band height="100" splitType="Stretch">
-            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-            <componentElement>
-                <reportElement x="0" y="0" width="555" height="100" uuid="76f5f4c1-ef73-4358-b848-c0caa01565d5">
-                    <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
-                    <property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
-                    <property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
-                    <property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
-                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                </reportElement>
-                <jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
-                    <datasetRun subDataset="studentDataset" uuid="28af05ee-d878-48f7-a353-b0acc9abe2a1">
-                        <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{students})]]></dataSourceExpression>
-                    </datasetRun>
-                    <jr:column width="80" uuid="e0030a31-c379-4bdc-bc6b-76106f600f52">
-                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
-                        <jr:detailCell style="Table_TD" height="100">
-                            <property name="com.jaspersoft.studio.unit.width" value="px"/>
-                            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                            <textField>
-                                <reportElement x="0" y="0" width="80" height="100" uuid="2bbce572-b505-49df-af5a-6d50ed1fe7c4"/>
-                                <textElement textAlignment="Center"/>
-                                <textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
-                            </textField>
-                        </jr:detailCell>
-                    </jr:column>
-                    <jr:column width="80" uuid="51afad72-43fb-4481-abb2-24446aef315c">
-                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
-                        <jr:detailCell style="Table_TD" height="100">
-                            <property name="com.jaspersoft.studio.unit.width" value="px"/>
-                            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                            <textField>
-                                <reportElement x="0" y="0" width="80" height="100" uuid="5a4e77cd-c04e-4e7f-be3a-9ffd13dd7e9a"/>
-                                <textElement textAlignment="Center"/>
-                                <textFieldExpression><![CDATA[$F{uid}]]></textFieldExpression>
-                            </textField>
-                        </jr:detailCell>
-                    </jr:column>
-                    <jr:column width="79" uuid="386b045c-5620-4510-8d2a-58497226d36e">
-                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
-                        <jr:detailCell style="Table_TD" height="100">
-                            <property name="com.jaspersoft.studio.unit.width" value="px"/>
-                            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                            <textField>
-                                <reportElement x="0" y="0" width="79" height="100" uuid="b24d8c4f-81f9-4bb6-9cd3-8238dd18953a">
-                                    <property name="com.jaspersoft.studio.unit.height" value="pixel"/>
-                                </reportElement>
-                                <textElement textAlignment="Center"/>
-                                <textFieldExpression><![CDATA[$F{registration}]]></textFieldExpression>
-                            </textField>
-                        </jr:detailCell>
-                    </jr:column>
-                    <jr:column width="79" uuid="012fa102-0bd0-4561-8cb4-2830f3105444">
-                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
-                        <jr:detailCell style="Table_TD" height="100">
-                            <property name="com.jaspersoft.studio.unit.width" value="px"/>
-                            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                            <textField>
-                                <reportElement x="0" y="0" width="79" height="100" uuid="1f8e8b94-05a8-47be-aa34-470175544ee5"/>
-                                <textElement textAlignment="Center"/>
-                                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
-                            </textField>
-                        </jr:detailCell>
-                    </jr:column>
-                    <jr:column width="79" uuid="f513cb67-2470-4104-b11d-61db5cc4a540">
-                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
-                        <jr:detailCell style="Table_TD" height="100">
-                            <property name="com.jaspersoft.studio.unit.width" value="px"/>
-                            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                            <textField>
-                                <reportElement x="0" y="0" width="79" height="100" uuid="160cdb58-a315-4de3-b13b-c7da9e70cd64"/>
-                                <textElement textAlignment="Center"/>
-                                <textFieldExpression><![CDATA[$F{courseId}]]></textFieldExpression>
-                            </textField>
-                        </jr:detailCell>
-                    </jr:column>
-                    <jr:column width="79" uuid="a90da5a6-42d0-4f0d-9047-f1e5df8680c2">
-                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
-                        <jr:detailCell style="Table_TD" height="100">
-                            <property name="com.jaspersoft.studio.unit.width" value="px"/>
-                            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                            <textField>
-                                <reportElement x="0" y="0" width="79" height="100" uuid="e07e4c23-b655-4c63-b71b-16f3a34a6578"/>
-                                <textElement textAlignment="Center"/>
-                                <textFieldExpression><![CDATA[$F{checkedAnd}]]></textFieldExpression>
-                            </textField>
-                        </jr:detailCell>
-                    </jr:column>
-                    <jr:column width="79" uuid="3668463a-2c74-4220-8958-1a9a918a0d9d">
-                        <property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
-                        <jr:detailCell style="Table_TD" height="100">
-                            <property name="com.jaspersoft.studio.unit.width" value="px"/>
-                            <property name="com.jaspersoft.studio.unit.height" value="px"/>
-                            <textField>
-                                <reportElement x="0" y="0" width="79" height="100" uuid="c80f749a-69e8-4b3e-add4-e559573f9054"/>
-                                <textElement textAlignment="Center"/>
-                                <textFieldExpression><![CDATA[$F{signatureOf}]]></textFieldExpression>
-                            </textField>
-                        </jr:detailCell>
-                    </jr:column>
-                </jr:table>
-            </componentElement>
-        </band>
-    </detail>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="studentDataset" uuid="3d57d169-81f0-4249-bbeb-75474b0dcd22">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="uid" class="java.lang.String"/>
+		<field name="registration" class="java.lang.String"/>
+		<field name="name" class="java.lang.String"/>
+		<field name="courseIds" class="java.util.List"/>
+		<field name="checkedAnd" class="java.lang.String"/>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="subject" class="java.lang.String"/>
+	<field name="subjectType" class="java.lang.String"/>
+	<field name="semester" class="java.lang.String"/>
+	<field name="formFillupType" class="java.lang.String"/>
+	<field name="students" class="java.util.List"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="68" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="160" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="a291e2ba-4c26-4c14-aa2b-2f911aa14f08">
+					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="2"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBJECT]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="160" y="0" width="158" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="fd63c899-8068-49d0-8ce8-5d91e9a77d1a">
+					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="2"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="318" y="0" width="158" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="4f0187a0-96fc-452d-8bdc-e4cbb3a83dad">
+					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="2"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SUBJECT TYPE]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="476" y="0" width="79" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="695cc38d-2048-473b-8e3b-59be82a6753c"/>
+				<box topPadding="3" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{subjectType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="23" width="160" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="008c9a75-c3e6-42c6-a31d-2c9199b84e37">
+					<property name="com.jaspersoft.layout.grid.x" value="0"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="2"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEMESTER]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="160" y="23" width="158" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="df229eab-17ba-491a-9999-b998597023e0">
+					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="2"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{semester}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Opaque" x="318" y="23" width="158" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="4afc146e-e883-4aaf-9a78-f34ab9ac5b09">
+					<property name="com.jaspersoft.layout.grid.x" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="2"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+				</reportElement>
+				<box topPadding="3" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORM FILLUP TYPE]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="476" y="23" width="79" height="23" backcolor="rgba(209, 209, 209, 0.4392157)" uuid="a2c65c6e-4842-42ba-8723-4147a88bb602"/>
+				<box topPadding="3" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{formFillupType}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="46" width="80" height="22" uuid="b59a47cd-69e6-40a2-b2f2-5ad1d1e77ff9">
+					<property name="com.jaspersoft.layout.grid.x" value="0"/>
+					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
+					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.colspan" value="1"/>
+					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+				</reportElement>
+				<box topPadding="5" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SL.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="46" width="80" height="22" uuid="e7004ba2-b553-40e3-9157-01e7a9b91522"/>
+				<box topPadding="5" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[UID/College]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="46" width="79" height="22" uuid="b22db989-87d3-4306-bb48-e1db9175d231"/>
+				<box topPadding="5" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGISTRATION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="46" width="79" height="22" uuid="3138cee5-d165-4f1a-87ac-634e2a0529d8"/>
+				<box topPadding="5" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NAME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="46" width="79" height="22" uuid="48628767-6db0-4346-a73e-01bfd21ad01a"/>
+				<box topPadding="5" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COURSE IDs	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="46" width="79" height="22" uuid="a23b91e9-d5f7-4e6d-90bb-2531df8508bf"/>
+				<box topPadding="5" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Checked and]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="46" width="79" height="22" uuid="9dd0abff-5107-41c6-a62a-cc8ceee11fd1"/>
+				<box topPadding="5" leftPadding="5">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature of Student]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="100" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<componentElement>
+				<reportElement x="0" y="0" width="555" height="100" uuid="76f5f4c1-ef73-4358-b848-c0caa01565d5">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="studentDataset" uuid="28af05ee-d878-48f7-a353-b0acc9abe2a1">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{students})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="e0030a31-c379-4bdc-bc6b-76106f600f52">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:detailCell style="Table_TD" height="100">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="80" height="100" uuid="2bbce572-b505-49df-af5a-6d50ed1fe7c4"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="80" uuid="51afad72-43fb-4481-abb2-24446aef315c">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:detailCell style="Table_TD" height="100">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="80" height="100" uuid="5a4e77cd-c04e-4e7f-be3a-9ffd13dd7e9a"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{uid}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="79" uuid="386b045c-5620-4510-8d2a-58497226d36e">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:detailCell style="Table_TD" height="100">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="79" height="100" uuid="b24d8c4f-81f9-4bb6-9cd3-8238dd18953a">
+									<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+								</reportElement>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{registration}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="79" uuid="012fa102-0bd0-4561-8cb4-2830f3105444">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:detailCell style="Table_TD" height="100">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="79" height="100" uuid="1f8e8b94-05a8-47be-aa34-470175544ee5"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="79" uuid="f513cb67-2470-4104-b11d-61db5cc4a540">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:detailCell style="Table_TD" height="100">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="79" height="100" uuid="160cdb58-a315-4de3-b13b-c7da9e70cd64"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{courseIds}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="79" uuid="a90da5a6-42d0-4f0d-9047-f1e5df8680c2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:detailCell style="Table_TD" height="100">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField>
+								<reportElement x="0" y="0" width="79" height="100" uuid="e07e4c23-b655-4c63-b71b-16f3a34a6578"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{checkedAnd}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="79" uuid="3668463a-2c74-4220-8958-1a9a918a0d9d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:detailCell style="Table_TD" height="100">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
 </jasperReport>
