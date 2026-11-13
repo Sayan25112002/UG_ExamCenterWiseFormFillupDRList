@@ -28,4 +28,6 @@ public class University {
     @JsonIgnore
     private List<Subject> subjects;
 
+    private String totalCandidates;
+
 }
