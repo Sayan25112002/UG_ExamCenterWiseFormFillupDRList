@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExamCenterWiseFormFillupDRList(PR)" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4dcf3899-ff98-4061-a207-51b5dfbc374f">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="subjectReport" class="net.sf.jasperreports.engine.JasperReport"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <field name="universityName" class="java.lang.String"/>
+    <field name="examCenterName" class="java.lang.String"/>
+    <field name="examinationName" class="java.lang.String"/>
+    <field name="totalCandidate" class="java.lang.String"/>
+    <field name="subjects" class="java.util.List"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <pageHeader>
+        <band height="91" splitType="Stretch">
+            <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+            <textField>
+                <reportElement x="0" y="0" width="555" height="31" uuid="a2fefa9c-8065-430b-b37d-0b9843c3ffb6"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="15" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{universityName}]]></textFieldExpression>
+            </textField>
+            <textField evaluationTime="Master">
+                <reportElement x="480" y="0" width="75" height="31" uuid="ef66efa7-8504-4ddf-b11e-b2edb9f32f92"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle"/>
+                <textFieldExpression><![CDATA["Page "+$V{MASTER_CURRENT_PAGE}+" of "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="0" y="31" width="555" height="30" uuid="10a35aa7-3b91-4ca4-b3c4-24a4747662c1">
+                    <property name="com.jaspersoft.layout.grid.x" value="0"/>
+                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
+                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+                    <property name="com.jaspersoft.layout.grid.colspan" value="2"/>
+                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="13" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{examCenterName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="0" y="61" width="555" height="30" uuid="0a33e0c7-ea00-4f07-a296-068fac723bd2">
+                    <property name="com.jaspersoft.layout.grid.x" value="0"/>
+                    <property name="com.jaspersoft.layout.grid.y" value="-1"/>
+                    <property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
+                    <property name="com.jaspersoft.layout.grid.weight.y" value="1.0"/>
+                    <property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
+                    <property name="com.jaspersoft.layout.grid.colspan" value="2"/>
+                    <property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+                </reportElement>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="11" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{examinationName}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <detail>
+        <band height="200" splitType="Stretch">
+            <subreport>
+                <reportElement x="0" y="0" width="555" height="168" uuid="19596da6-d2a9-4dca-b1cd-55d90c8129da">
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+                <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{subjects})]]></dataSourceExpression>
+                <subreportExpression><![CDATA[$P{subjectReport}]]></subreportExpression>
+            </subreport>
+            <textField>
+                <reportElement x="0" y="170" width="555" height="30" uuid="377f9272-1605-4fae-be08-7f3f199c5165"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font size="13" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["TOTAL NO OF CANDIDATE : "+$F{totalCandidate}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>
