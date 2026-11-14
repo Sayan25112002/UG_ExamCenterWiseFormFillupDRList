@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -13,12 +15,14 @@ public class StudentResponseDto {
 
     private Long id;
 
-    private String subject;
+    private String uid;
 
-    private String subjectType;
+    private String registration;
 
-    private String semester;
+    private String name;
 
-    private String formFillupType;
+    private List<String> courseIds;
+
+    private String checkedAnd;
 
 }

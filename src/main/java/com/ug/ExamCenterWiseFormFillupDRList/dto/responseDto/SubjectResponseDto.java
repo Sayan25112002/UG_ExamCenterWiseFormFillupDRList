@@ -12,15 +12,13 @@ public class SubjectResponseDto {
 
     private Long id;
 
-    private String uid;
+    private String subject;
 
-    private String registration;
+    private String subjectType;
 
-    private String name;
+    private String semester;
 
-    private List<String> courseIds;
-
-    private String checkedAnd;
+    private String formFillupType;
 
     private List<StudentResponseDto> students;
 

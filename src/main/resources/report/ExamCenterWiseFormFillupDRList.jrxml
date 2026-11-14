@@ -6,31 +6,39 @@
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
-	<field name="universityName" class="java.lang.String"/>
-	<field name="examCenterName" class="java.lang.String"/>
-	<field name="examinationName" class="java.lang.String"/>
+	<field name="university" class="java.lang.String"/>
+	<field name="examCenter" class="java.lang.String"/>
+	<field name="examination" class="java.lang.String"/>
 	<field name="totalCandidates" class="java.lang.String"/>
 	<field name="subjects" class="java.util.List"/>
+	<field name="examCode" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="91" splitType="Stretch">
+		<band height="55" splitType="Stretch">
 			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField>
-				<reportElement x="0" y="0" width="555" height="31" uuid="a2fefa9c-8065-430b-b37d-0b9843c3ffb6"/>
+				<reportElement x="0" y="0" width="555" height="20" uuid="a2fefa9c-8065-430b-b37d-0b9843c3ffb6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="15" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{universityName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{university}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Master">
-				<reportElement x="480" y="0" width="75" height="31" uuid="ef66efa7-8504-4ddf-b11e-b2edb9f32f92"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<reportElement x="487" y="0" width="75" height="17" uuid="ef66efa7-8504-4ddf-b11e-b2edb9f32f92">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
 				<textFieldExpression><![CDATA["Page "+$V{MASTER_CURRENT_PAGE}+" of "+$V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="31" width="555" height="30" uuid="10a35aa7-3b91-4ca4-b3c4-24a4747662c1">
+				<reportElement x="0" y="20" width="555" height="18" uuid="10a35aa7-3b91-4ca4-b3c4-24a4747662c1">
 					<property name="com.jaspersoft.layout.grid.x" value="0"/>
 					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -38,14 +46,15 @@
 					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
 					<property name="com.jaspersoft.layout.grid.colspan" value="2"/>
 					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font size="13" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{examCenterName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Exam Center : "+$F{examCenter}+" , Code : "+$F{examCode}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="61" width="555" height="30" uuid="0a33e0c7-ea00-4f07-a296-068fac723bd2">
+				<reportElement x="0" y="38" width="555" height="15" uuid="0a33e0c7-ea00-4f07-a296-068fac723bd2">
 					<property name="com.jaspersoft.layout.grid.x" value="0"/>
 					<property name="com.jaspersoft.layout.grid.y" value="-1"/>
 					<property name="com.jaspersoft.layout.grid.weight.x" value="1.0"/>
@@ -53,29 +62,42 @@
 					<property name="com.jaspersoft.layout.grid.rowspan" value="1"/>
 					<property name="com.jaspersoft.layout.grid.colspan" value="2"/>
 					<property name="com.jaspersoft.layout.grid.weight.fixed" value="false"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="11" isBold="true"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="10" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{examinationName}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{examination}]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="200" splitType="Stretch">
+		<band height="111" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<subreport>
-				<reportElement x="0" y="0" width="555" height="168" uuid="19596da6-d2a9-4dca-b1cd-55d90c8129da">
+				<reportElement x="-10" y="0" width="566" height="111" uuid="19596da6-d2a9-4dca-b1cd-55d90c8129da">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{subjects})]]></dataSourceExpression>
 				<subreportExpression><![CDATA[$P{subjectReport}]]></subreportExpression>
 			</subreport>
+		</band>
+		<band height="30">
 			<textField>
-				<reportElement x="0" y="170" width="555" height="30" uuid="377f9272-1605-4fae-be08-7f3f199c5165"/>
+				<reportElement x="-10" y="0" width="572" height="30" uuid="ad72295f-7712-4063-833f-97d95dba286f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineColor="rgba(0, 0, 0, 0.13725491)"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(0, 0, 0, 0.14509805)"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(0, 0, 0, 0.14509805)"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(0, 0, 0, 0.14509805)"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="rgba(0, 0, 0, 0.14509805)"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="13" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA["TOTAL NO OF CANDIDATE : "+$F{totalCandidates}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["TOTAL NO OF CANDIDATES : "+$F{totalCandidates}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
